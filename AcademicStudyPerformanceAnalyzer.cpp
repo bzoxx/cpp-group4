@@ -13,7 +13,7 @@ int main(){
 for(int i=0; i!=numstudents; i++){
             cout<<"Enter the name of Student number "<<i+1<<" ";
             cin>>names[i];
-            id[i]="ets"+to_string(i);
+            id[i]="ets"+to_string(i+1);
     for(int j=0; j!=7; j++){
             cout<<names[i]<<"'s hours of student at Day "<<j+1<<" ";
             cin>>hours[i][j];
@@ -45,10 +45,11 @@ for(int i=0; i!=numstudents; i++){
         cout << setw(10) << totals[i];
         cout << endl;
     }
-
+searchbar:
 cout<<endl;
 cout<<"Search with Name/Id ";
 cin>>searchh;
+found = -1;
 transform(searchh.begin(), searchh.end(), searchh.begin(), ::tolower);
     for (int i = 0; i < numstudents; i++)
     {
@@ -67,7 +68,7 @@ transform(searchh.begin(), searchh.end(), searchh.begin(), ::tolower);
 
     }
 
-    if(found==NULL){
+    if(found==-1){
         cout<<"endeza mibal sew weynm temsasay id yalew yelem"<<endl;
     }else{
                     cout << endl<< "-------------------------------------------------" << endl<< endl;
@@ -96,8 +97,19 @@ transform(searchh.begin(), searchh.end(), searchh.begin(), ::tolower);
     }
 
     }
+els:
+char yorn;
+cout<<endl<<"Do you want to search again Y/N? ";
+cin>>yorn;
+if(yorn=='y' || yorn =='Y'){
+    goto searchbar;
+}else if(yorn=='n' || yorn =='N'){
+    cout<<"Thank you for using our program!!";
+}else{
+     cout<<"sorry, You entered another key ";
 
-
+    goto els;
+}
 
 
 return 0;
