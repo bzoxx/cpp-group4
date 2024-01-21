@@ -2,7 +2,7 @@
 using namespace std;
 int main(){
 int n,spaces;
-n=9;
+cin>>n;
 for(int i=0; i!=n; i++){
 if(i==0){
 for(int j=1; j<=n-i; j++){
