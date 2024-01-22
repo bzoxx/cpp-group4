@@ -2,6 +2,7 @@
 using namespace std;
 int main(){
 int n,spaces;
+    cout<<"Enter Postive number for your pattern "
 cin>>n;
 for(int i=0; i!=n; i++){
 if(i==0){
