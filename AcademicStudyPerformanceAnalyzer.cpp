@@ -114,7 +114,7 @@ searchBar:
 
     if(found==-1)
     {
-        cout<<"endeza mibal sew weynm temsasay id yalew yelem"<<endl;
+        cout<<"There is no Student with the same name/id."<<endl;
     }
     else
     {
