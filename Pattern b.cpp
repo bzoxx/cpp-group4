@@ -1,9 +1,16 @@
 #include <iostream>
 using namespace std;
 int main(){
-int n,spaces;
+int n,spaces,a;
+a:
 cout<<"Enter Postive number for your pattern ";
 cin>>n;
+
+if(n<0){
+   cout<< "error you have enter a number less than zero."<<endl;
+   goto a;
+}
+else{
 for(int i=0; i!=n; i++){
 if(i==0){
 for(int j=1; j<=n-i; j++){
@@ -70,5 +77,26 @@ for(int j=0; j<=n-i; j++){
 }
     cout<<endl;
 }
+}
+els:
+    char yorn,ch;
+    cout << "\nDo you want to go again Y/N? ";
+    cin >> yorn;
+    ch=tolower(yorn);
+    if (ch == 'y')
+    {
+        goto a;
+    }
+    else if (ch == 'n')
+    {
+        cout << "Thank you for using our program!!"<< endl;
+    }
+    else
+    {
+        cout<<"sorry, You entered another key ";
+
+        goto els;
+    }
+
 return 0;
 }
